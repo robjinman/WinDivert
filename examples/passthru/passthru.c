@@ -181,6 +181,8 @@ static DWORD passthru(LPVOID arg)
             continue;
         }
 
+        Sleep(1);
+
         // Re-inject the matching packet.
         if (!WinDivertSendEx(handle, packet, recv_len, NULL, 0, addr,
                 addr_len, NULL))
